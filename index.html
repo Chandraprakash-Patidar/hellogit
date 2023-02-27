@@ -26,6 +26,7 @@
       <li class="list-group-item">Item 2</li>
       <li class="list-group-item">Item 3</li>
       <li class="list-group-item">Item 4</li>
+      <li class="new-item">Item 5</li>
     </ul>
    </div>
   </div>
@@ -35,6 +36,42 @@
   for(var i=0;i<items.length;i++)
   {
       items[i].style.fontWeight='bold'
-  }</script>
+  }
+  // var item5 = document.getElementsByClassName('new-item');
+  // item5.style.border='1px solid black'
+
+  // item5.style.fontWeight='bold';
+  // item5.style.backgroundColor='yellow'
+
+  //GET ELEMENT BY CLASS NAME
+//   var item5 = document.getElementsByClassName('new-item');
+// for (var i = 0; i < item5.length; i++) {
+//   item5[i].style.border = '1px solid #80808038';
+//   item5[i].style.padding='10px'
+//   item5[i].style.textAlign='left'
+//   item5[i].style.fontWeight = 'bold';
+//   item5[i].style.backgroundColor = 'yellow';
+//   item5[i].style.listStyleType='none'
+//   item5[i].style.textIndent='10px';
+// }
+
+//GET ELEMENT BY TAG NAME
+
+var item5 = document.getElementsByTagName('li');
+for (var i = 0; i < item5.length; i++) 
+{
+if(item5[i].className == 'new-item')
+  {
+  item5[i].style.border = '1px solid #80808038';
+  item5[i].style.padding='10px'
+  item5[i].style.textAlign='left'
+  item5[i].style.fontWeight = 'bold';
+  item5[i].style.backgroundColor = 'yellow';
+  item5[i].style.listStyleType='none'
+  item5[i].style.textIndent='10px';
+  }
+ }
+  </script>
+  
 </body>
 </html>
