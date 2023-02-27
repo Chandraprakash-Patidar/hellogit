@@ -15,7 +15,7 @@
   </header>
   <div class="container">
    <div id="main" class="card card-body">
-    <h2 class="title1">Add Items</h2>
+    <h2 class="title">Add Items</h2>
     <form class="form-inline mb-3">
       <input type="text" class="form-control mr-2">
       <input type="submit" class="btn btn-dark" value="Submit">
@@ -26,52 +26,24 @@
       <li class="list-group-item">Item 2</li>
       <li class="list-group-item">Item 3</li>
       <li class="list-group-item">Item 4</li>
-      <li class="new-item">Item 5</li>
     </ul>
    </div>
   </div>
-<script >var items = document.getElementsByClassName('list-group-item');
-  console.log(items)
-  items[2].style.backgroundColor ='green';
-  for(var i=0;i<items.length;i++)
-  {
-      items[i].style.fontWeight='bold'
-  }
-  // var item5 = document.getElementsByClassName('new-item');
-  // item5.style.border='1px solid black'
-
-  // item5.style.fontWeight='bold';
-  // item5.style.backgroundColor='yellow'
-
-  //GET ELEMENT BY CLASS NAME
-//   var item5 = document.getElementsByClassName('new-item');
-// for (var i = 0; i < item5.length; i++) {
-//   item5[i].style.border = '1px solid #80808038';
-//   item5[i].style.padding='10px'
-//   item5[i].style.textAlign='left'
-//   item5[i].style.fontWeight = 'bold';
-//   item5[i].style.backgroundColor = 'yellow';
-//   item5[i].style.listStyleType='none'
-//   item5[i].style.textIndent='10px';
+<script>
+  var seconditem = document.querySelectorAll('#items .list-group-item:nth-child(2)');
+for(var i=0; i<seconditem.length; i++) {
+  seconditem[i].style.color = 'green';
+}
+var odd= document.querySelectorAll('li:nth-child(odd)');
+for(var i=0;i<odd.length;i++)
+{
+  odd[i].style.backgroundColor='green';
+}
+// var odd = document.querySelectorAll('li:nth-child(odd)');
+// for(var i=0; i<odd.length; i++) {
+//   odd[i].style.backgroundColor='green';
 // }
 
-//GET ELEMENT BY TAG NAME
-
-var item5 = document.getElementsByTagName('li');
-for (var i = 0; i < item5.length; i++) 
-{
-if(item5[i].className == 'new-item')
-  {
-  item5[i].style.border = '1px solid #80808038';
-  item5[i].style.padding='10px'
-  item5[i].style.textAlign='left'
-  item5[i].style.fontWeight = 'bold';
-  item5[i].style.backgroundColor = 'yellow';
-  item5[i].style.listStyleType='none'
-  item5[i].style.textIndent='10px';
-  }
- }
-  </script>
-  
+</script>
 </body>
 </html>
