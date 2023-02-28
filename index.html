@@ -29,21 +29,24 @@
     </ul>
    </div>
   </div>
-<script>
-  var seconditem = document.querySelectorAll('#items .list-group-item:nth-child(2)');
-for(var i=0; i<seconditem.length; i++) {
-  seconditem[i].style.color = 'green';
-}
-var odd= document.querySelectorAll('li:nth-child(odd)');
-for(var i=0;i<odd.length;i++)
-{
-  odd[i].style.backgroundColor='green';
-}
-// var odd = document.querySelectorAll('li:nth-child(odd)');
-// for(var i=0; i<odd.length; i++) {
-//   odd[i].style.backgroundColor='green';
-// }
+  <script>
+    var div = document.createElement('div');
+  var divText = document.createTextNode('HEllo world');
+  div.appendChild(divText);
+  var container = document.querySelector('header .container');
+  var h1 = document.querySelector('header h1');
+  container.insertBefore(div, h1);
 
-</script>
+  // HEllo word before Item 1
+
+var newdiv = document.createElement('div');
+var divText = document.createTextNode('HEllo word');
+newdiv.appendChild(divText);
+
+var itemList = document.getElementById('items');
+
+itemList.insertBefore(newdiv, itemList.firstElementChild);
+  </script>
+
 </body>
 </html>
